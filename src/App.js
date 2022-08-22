@@ -11,7 +11,6 @@ const initialState = {
   searchHistory: []
 };
 
-/* 2do Creo un nuevo cliente para usarlo en el provider */
 const queryClient = new QueryClient();
 
 const reducer = (state, action) => {
