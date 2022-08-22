@@ -2,23 +2,17 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import EmptyCard from './EmptyCard';
 
-/* 1ero Uso useQuery para el fetch */
 const getUser = async(user) => {
     const response = await fetch(`https://api.github.com/users/${user}`);
     const data = await response.json();
     return data;
 }
-/* 2do En App tengo que proveer el cliente del useQuery */
 
 
 const DetailCard = ({ user }) => {
 
-  /* 3ero usar useQuery, con un string y una key */
-  /* El segundo parámetro es la petición pasada como función anónima porque necesito pasarle el user por parámetro */
   const { isLoading, isError, data } = useQuery( ["GET_USER", user], () => getUser(user) );
-  /* useQuery retorna un objeto con un montón de propiedades que desestructuro arriba */
 
-  /* uso isLoading para comprobar si se está cargando la data, lo mismo con isError*/
   if(isLoading){
     return <EmptyCard text="Loading..." />
   }
@@ -27,8 +21,6 @@ const DetailCard = ({ user }) => {
     return <EmptyCard text="Error. Try again, please." />
   }
 
-  /* 4to Acá ya puedo acceder a data y toda la info para renderizarla en el return
-  console.log(data); */
 
   return (
     <div className='detail'>
