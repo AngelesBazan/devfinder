@@ -12,8 +12,8 @@ const DetailCard = () => {
         </div>
         <div className='right'>
             <div className='title'>
-                <h2> </h2>
-                <a href="https://"> </a>
+                <h2>Octocat</h2>
+                <a href="https://">@octocat</a>
             </div>
             <div className='stats'>
                 <div className='item'>
@@ -34,7 +34,7 @@ const DetailCard = () => {
                     <i className="fas fa-map-marker-alt"></i> Ad lorem
                 </li>
                 <li>
-                    <i className="fas fa-twitter"></i> Ad lorem
+                    <i className="fab fa-twitter"></i> Ad lorem
                 </li>
                 <li>
                     <i className="fas fa-link"></i> Ad lorem
