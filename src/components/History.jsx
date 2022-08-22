@@ -5,15 +5,13 @@ const History = ({users}) => {
     <div>
         <h4>Search history</h4>
         <ul>
-            <li>
-                <a href="https://"> </a>
-            </li>
-            <li>
-                <a href="https://"> </a>
-            </li>
-            <li>
-                <a href="https://"> </a>
-            </li>
+            {
+                users?.map((user, index) => (
+                    <li key={index}>
+                        <a href={`https://github.com/${user}`}>{user}</a>
+                    </li>
+                ))
+            }
         </ul>
     </div>
   )
