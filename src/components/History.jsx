@@ -2,7 +2,7 @@ import React from 'react'
 
 const History = ({users}) => {
   return (
-    <div>
+    <div className='history'>
         <h4>Search history</h4>
         <ul>
             {
